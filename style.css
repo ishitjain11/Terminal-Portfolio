@@ -1,0 +1,82 @@
+body {
+  margin: 0;
+  background: #000;
+  color: #0f0;
+  font-family: 'Courier New', Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#terminal {
+  background: #111;
+  width: 95vw;
+  max-width: 900px;
+  height: 90vh;
+  border-radius: 6px;
+  padding: 15px;
+  box-sizing: border-box;
+  box-shadow: 0 0 15px #0f0;
+  display: flex;
+  flex-direction: column;
+}
+
+#output {
+  flex-grow: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+#input-line {
+  display: flex;
+  align-items: center;
+}
+
+#prompt {
+  margin-right: 5px;
+  color: #0ff;
+}
+
+#input {
+  background: transparent;
+  border: none;
+  color: #0f0;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  flex-grow: 1;
+}
+
+#input:focus {
+  caret-color: #0f0;
+}
+
+/* Spacing & readability */
+#output div {
+  margin-bottom: 8px;
+}
+
+.command-line {
+  margin-top: 12px;
+  font-weight: bold;
+  color: #0ff;
+}
+
+.cmd { color: #0f0; font-weight: bold; cursor: pointer; }
+.desc { color: #0ff; }
+.error { color: #f88; }
+
+a { color: #0ff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn 0.35s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
